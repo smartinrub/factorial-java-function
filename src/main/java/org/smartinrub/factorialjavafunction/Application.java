@@ -18,14 +18,14 @@ public class Application {
         return value -> Long.toString(getFactorial(value));
     }
 
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
-
     private long getFactorial(long number) {
         if (number == 1) {
             return number;
         }
         return getFactorial(number - 1) * number;
+    }
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
     }
 }
